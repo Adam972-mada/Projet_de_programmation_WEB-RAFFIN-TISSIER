@@ -1,0 +1,264 @@
+/* =====================================================================
+   continent.css : style des pages continent (même ambiance que l'accueil)
+   ===================================================================== */
+
+/* ---------- Base (identique à l'accueil) ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #061525;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+a {
+    color: #00cfff;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid #00cfff;
+    outline-offset: 4px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- En-tête ---------- */
+header {
+    padding: 45px 20px 10px;
+}
+
+header > p:first-child {
+    font-size: 15px;
+}
+
+header > p:first-child a:hover {
+    text-shadow: 0 0 10px #00cfff;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: clamp(28px, 5vw, 52px);
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(0, 207, 255, 0.45);
+}
+
+header p {
+    margin-top: 12px;
+    color: #9bb4c8;
+    font-size: 16px;
+}
+
+/* Introduction du continent */
+header > h1 + p {
+    max-width: 700px;
+    margin: 16px auto 0;
+    font-size: 17px;
+    color: #c9d9e6;
+}
+
+/* ---------- Liste des pays (haut de page) et autres continents (bas de page) ---------- */
+nav p {
+    margin-top: 32px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav ul,
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+nav a,
+footer a {
+    display: inline-block;
+    padding: 10px 22px;
+    color: white;
+    background: #0b2238;
+    border: 1px solid #1e4a6b;
+    border-radius: 999px;
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+nav a:hover,
+footer a:hover {
+    background: #00cfff;
+    color: #061525;
+    box-shadow: 0 0 18px rgba(0, 207, 255, 0.6);
+}
+
+/* ---------- Séparateurs ---------- */
+hr {
+    border: 0;
+    height: 1px;
+    margin: 30px 0 0;
+    background: linear-gradient(90deg, transparent, #1e4a6b, transparent);
+}
+
+/* ---------- Contenu principal ---------- */
+main {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Un pays : les textes occupent toute la largeur, les photos s'alignent au centre */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+    padding: 40px 0 20px;
+    scroll-margin-top: 20px;
+}
+
+section > :not(figure) {
+    flex: 0 0 100%;
+}
+
+h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: 3px;
+    color: #00cfff;
+    text-shadow: 0 0 14px rgba(0, 207, 255, 0.4);
+}
+
+/* Période du voyage */
+section > p:first-of-type {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9bb4c8;
+}
+
+/* Description du pays */
+section > p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #c9d9e6;
+}
+
+h3 {
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9bb4c8;
+}
+
+/* ---------- Photos ---------- */
+figure {
+    flex: 0 1 360px;
+    max-width: 100%;
+    background: #0b2238;
+    border: 1px solid #12324b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+figure:hover {
+    transform: translateY(-4px);
+    border-color: #00cfff;
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.35);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #9bb4c8;
+}
+
+/* OPTION : photos qui défilent dans la largeur.
+   Il suffit d'entourer les <figure> d'un pays avec <div class="photos"> ... </div> */
+.photos {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 6px 4px 18px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #00cfff #12324b;
+}
+
+.photos figure {
+    flex: 0 0 min(80vw, 420px);
+    scroll-snap-align: start;
+}
+
+/* ---------- Bas de page ---------- */
+footer {
+    max-width: 1250px;
+    margin: 40px auto 0;
+    padding: 40px 20px 50px;
+    border-top: 1px solid #12324b;
+    color: #9bb4c8;
+}
+
+footer h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: none;
+}
+
+footer p {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    header {
+        padding-top: 30px;
+    }
+
+    h1 {
+        letter-spacing: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    figure,
+    nav a,
+    footer a {
+        transition: none;
+    }
+
+    figure:hover {
+        transform: none;
+    }
+}
