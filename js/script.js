@@ -12,7 +12,7 @@ if (!carte.empty()) {
         "North America": "Amérique du Nord",
         "South America": "Amérique du Sud",
         "Oceania": "Océanie",
-        "Australia": "Océanie"
+        
     };
 
     const pages = {
