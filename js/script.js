@@ -110,28 +110,3 @@ if (!carte.empty()) {
         });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const wrappers = document.querySelectorAll(".photos-scroll-wrapper");
-
-    wrappers.forEach(wrapper => {
-        const container = wrapper.querySelector(".photos-container");
-        const prevBtn = wrapper.querySelector(".prev-btn");
-        const nextBtn = wrapper.querySelector(".next-btn");
-
-        if (!container || !prevBtn || !nextBtn) return;
-
-        const scrollGallery = (direction) => {
-            const firstPhoto = container.querySelector("figure");
-            // Calcule la largeur d'une photo + l'espace (gap de 20px), ou 350px par défaut
-            const step = firstPhoto ? firstPhoto.offsetWidth + 20 : 350;
-            
-            container.scrollBy({
-                left: direction * step,
-                behavior: "smooth"
-            });
-        };
-
-        prevBtn.addEventListener("click", () => scrollGallery(-1));
-        nextBtn.addEventListener("click", () => scrollGallery(1));
-    });
-});
