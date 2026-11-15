@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #061525;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 45px 20px 10px;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    letter-spacing: 6px;
+    color: #ffffff;
+}
+
+header p {
+    margin-top: 12px;
+    color: #9bb4c8;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+#carte {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#carte svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.continent {
+    fill: #12324b;
+    stroke: white;
+    stroke-width: 0.8;
+    cursor: pointer;
+
+    filter: drop-shadow(0 0 3px #ffffff);
+
+   
+    transition:
+        fill 0.4s ease,
+        filter 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.continent:hover,
+.continent:focus {
+    fill: #00cfff;
+    filter:
+        drop-shadow(0 0 8px #00cfff)
+        drop-shadow(0 0 18px #00cfff);
+    outline: none;
+}
+
+.continent.selectionne {
+    fill: #00cfff;
+    filter: drop-shadow(0 0 22px #00cfff);
+    animation: none;
+}
+
+
+#instruction {
+    color: #a8c0d3;
+    font-size: 15px;
+     margin-top: -40px;
+    position: relative;
+}
+
+#chargement {
+    padding: 100px 0;
+    color: #9bb4c8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .continent {
+        animation: none;
+        transition: none;
+    }
+}
+
