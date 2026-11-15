@@ -208,3 +208,53 @@ main {
     }
 }
 
+/* TABLEAU DE RÉPARTITION */
+
+.repartition-apropos {
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.repartition-apropos h2 {
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+.conteneur-tableau {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.tableau-travail {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #10243b;
+    color: white;
+}
+
+.tableau-travail th {
+    background-color: #008fb3;
+    padding: 18px;
+    border: 1px solid #24445d;
+}
+
+.tableau-travail td {
+    padding: 18px;
+    border: 1px solid #24445d;
+    text-align: center;
+}
+
+.tableau-travail tr:hover {
+    background-color: #183b55;
+}
+
+/* ADAPTATION TÉLÉPHONE */
+
+@media (max-width: 600px) {
+    .tableau-travail th,
+    .tableau-travail td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
