@@ -19,8 +19,8 @@ if (!carte.empty()) {
         "Afrique": "afrique.html",
         "Asie": "asie.html",
         "Europe": "europe.html",
-        "Amérique du Nord": "amerique_nord.html",
-        "Amérique du Sud": "amerique_sud.html",
+        "Amérique du Nord": "amerique-du-nord.html",
+        "Amérique du Sud": "amerique-du-sud.html",
         "Océanie": "oceanie.html"
     };
 
