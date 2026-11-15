@@ -402,3 +402,126 @@ footer p {
     cursor: zoom-in;
     transition: transform 0.3s ease;
 }
+
+
+/* ---------- Barre de navigation ---------- */
+.barre {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+    max-width: 1250px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 14px rgba(0, 207, 255, 0.45);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Liens du menu et bouton « Destinations » */
+.menu > a,
+.destinations summary {
+    display: block;
+    padding: 8px 18px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+.menu > a:hover,
+.menu > a[aria-current="page"],
+.destinations summary:hover,
+.destinations[open] summary {
+    background: none;
+    color: #00cfff;
+    border-bottom-color: #00cfff;
+    box-shadow: none;
+    text-shadow: 0 0 10px rgba(0, 207, 255, 0.6);
+}
+
+/* Flèche à la place du triangle par défaut */
+.destinations summary {
+    list-style: none;
+}
+
+.destinations summary::-webkit-details-marker {
+    display: none;
+}
+
+.destinations summary::after {
+    content: "▾";
+    margin-left: 8px;
+}
+
+.destinations[open] summary::after {
+    content: "▴";
+}
+
+/* Panneau déroulant */
+.destinations {
+    position: relative;
+}
+
+.destinations ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    min-width: 230px;
+    margin: 8px 0 0;
+    padding: 8px;
+    list-style: none;
+    text-align: left;
+    background: #0b2238;
+    border: 1px solid #1e4a6b;
+    border-radius: 12px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 207, 255, 0.15);
+}
+
+.destinations li a {
+    display: block;
+    padding: 10px 14px;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: 8px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.destinations li a:hover,
+.destinations li a[aria-current="page"] {
+    background: rgba(0, 207, 255, 0.15);
+    color: #00cfff;
+    box-shadow: none;
+}
