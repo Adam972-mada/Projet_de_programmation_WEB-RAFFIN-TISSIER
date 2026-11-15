@@ -1,8 +1,16 @@
-/* =====================================================================
-   continent.css : style des pages continent (même ambiance que l'accueil)
-   ===================================================================== */
 
-/* ---------- Base (identique à l'accueil) ---------- */
+/*Couleurs */
+:root {
+    --fond: #061525;
+    --accent: #00cfff;
+    --panneau: #0b2238;
+    --bordure: #1e4a6b;
+    --bordure-douce: #12324b;
+    --texte-doux: #9bb4c8;
+    --texte-clair: #c9d9e6;
+}
+
+/*  Base  */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +19,7 @@
 
 body {
     min-height: 100vh;
-    background: #061525;
+    background: var(--fond);
     color: white;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -20,12 +28,12 @@ body {
 }
 
 a {
-    color: #00cfff;
+    color: var(--accent);
     text-decoration: none;
 }
 
 a:focus-visible {
-    outline: 2px solid #00cfff;
+    outline: 2px solid var(--accent);
     outline-offset: 4px;
 }
 
@@ -33,378 +41,7 @@ img {
     max-width: 100%;
 }
 
-/* ---------- En-tête ---------- */
-header {
-    padding: 45px 20px 10px;
-}
-
-header > p:first-child {
-    font-size: 15px;
-}
-
-header > p:first-child a:hover {
-    text-shadow: 0 0 10px #00cfff;
-}
-
-h1 {
-    margin-top: 20px;
-    font-size: clamp(28px, 5vw, 52px);
-    letter-spacing: 6px;
-    color: #ffffff;
-    text-shadow: 0 0 18px rgba(0, 207, 255, 0.45);
-}
-
-header p {
-    margin-top: 12px;
-    color: #9bb4c8;
-    font-size: 16px;
-}
-
-/* Introduction du continent */
-header > h1 + p {
-    max-width: 700px;
-    margin: 16px auto 0;
-    font-size: 17px;
-    color: #c9d9e6;
-}
-
-/* ---------- Liste des pays (haut de page) et autres continents (bas de page) ---------- */
-nav p {
-    margin-top: 32px;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-nav ul,
-footer ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-nav a,
-footer a {
-    display: inline-block;
-    padding: 10px 22px;
-    color: white;
-    background: #0b2238;
-    border: 1px solid #1e4a6b;
-    border-radius: 999px;
-    transition:
-        background 0.4s ease,
-        color 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-nav a:hover,
-footer a:hover {
-    background: #00cfff;
-    color: #061525;
-    box-shadow: 0 0 18px rgba(0, 207, 255, 0.6);
-}
-
-/* ---------- Séparateurs ---------- */
-hr {
-    border: 0;
-    height: 1px;
-    margin: 30px 0 0;
-    background: linear-gradient(90deg, transparent, #1e4a6b, transparent);
-}
-
-/* ---------- Contenu principal ---------- */
-main {
-    width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Un pays : les textes occupent toute la largeur, les photos s'alignent au centre */
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px 24px;
-    padding: 40px 0 20px;
-    scroll-margin-top: 20px;
-}
-
-section > :not(figure) {
-    flex: 0 0 100%;
-}
-
-h2 {
-    font-size: clamp(26px, 4vw, 40px);
-    letter-spacing: 3px;
-    color: #00cfff;
-    text-shadow: 0 0 14px rgba(0, 207, 255, 0.4);
-}
-
-/* Période du voyage */
-section > p:first-of-type {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #9bb4c8;
-}
-
-/* Description du pays */
-section > p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 17px;
-    color: #c9d9e6;
-}
-
-h3 {
-    margin-top: 14px;
-    font-size: 13px;
-    font-weight: normal;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #9bb4c8;
-}
-
-/* ---------- Photos ---------- */
-figure {
-    flex: 0 1 360px;
-    max-width: 100%;
-    background: #0b2238;
-    border: 1px solid #12324b;
-    border-radius: 12px;
-    overflow: hidden;
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-figure:hover {
-    transform: translateY(-4px);
-    border-color: #00cfff;
-    box-shadow: 0 0 20px rgba(0, 207, 255, 0.35);
-}
-
-figure img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-figcaption {
-    padding: 12px 14px;
-    font-size: 14px;
-    color: #9bb4c8;
-}
-
-/* OPTION : photos qui défilent dans la largeur.
-   Il suffit d'entourer les <figure> d'un pays avec <div class="photos"> ... </div> */
-.photos {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 6px 4px 18px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: #00cfff #12324b;
-}
-
-.photos figure {
-    flex: 0 0 min(80vw, 420px);
-    scroll-snap-align: start;
-}
-
-/* ---------- Bas de page ---------- */
-footer {
-    max-width: 1250px;
-    margin: 40px auto 0;
-    padding: 40px 20px 50px;
-    border-top: 1px solid #12324b;
-    color: #9bb4c8;
-}
-
-footer h2 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: white;
-    text-shadow: none;
-}
-
-footer p {
-    margin-top: 30px;
-    font-size: 14px;
-}
-
-/* ---------- Mobile ---------- */
-@media (max-width: 600px) {
-    header {
-        padding-top: 30px;
-    }
-
-    h1 {
-        letter-spacing: 3px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    figure,
-    nav a,
-    footer a {
-        transition: none;
-    }
-
-    figure:hover {
-        transform: none;
-    }
-}
-
-
-
-/* ---------- Défilement vertical des photos ---------- */
-/* ---------- Défilement horizontal style Netflix ---------- */
-.photos-scroll-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1150px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.photos-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 15px 5px;
-    width: 100%;
-    /* Masque la barre de défilement classique pour un rendu épuré style Netflix */
-    scrollbar-width: none; /* Firefox */
-}
-
-.photos-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-}
-
-.photos-container figure {
-    /* Affiche exactement 3 photos côte à côte sur ordinateur */
-    flex: 0 0 calc(33.333% - 14px);
-    scroll-snap-align: start;
-    margin: 0;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Effet zoom au survol façon Netflix */
-.photos-container figure:hover {
-    transform: scale(1.04);
-    z-index: 2;
-}
-
-/* Boutons fléchés gauche / droite */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: rgba(6, 21, 37, 0.85);
-    color: #00cfff;
-    border: 1px solid #00cfff;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-.scroll-btn:hover {
-    background: #00cfff;
-    color: #061525;
-    box-shadow: 0 0 15px rgba(0, 207, 255, 0.7);
-}
-
-.prev-btn {
-    left: -15px;
-}
-
-.next-btn {
-    right: -15px;
-}
-
-/* Adaptation mobile / tablette */
-@media (max-width: 900px) {
-    .photos-container figure {
-        flex: 0 0 calc(50% - 10px); /* 2 photos sur tablette */
-    }
-}
-
-@media (max-width: 600px) {
-    .photos-container figure {
-        flex: 0 0 85%; /* 1 photo + aperçu de la suivante sur mobile */
-    }
-    .prev-btn { left: 5px; }
-    .next-btn { right: 5px; }
-}
-
-
-/* ---------- Visionneuse (Lightbox) pour afficher les photos en grand ---------- */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(6, 21, 37, 0.92);
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    cursor: zoom-out;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90vh;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 207, 255, 0.4);
-    border: 1px solid #1e4a6b;
-    object-fit: contain;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #00cfff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.lightbox-close:hover {
-    color: #ffffff;
-}
-
-/* Indique visuellement que l'on peut cliquer sur les photos */
-.photos-container figure img {
-    cursor: zoom-in;
-    transition: transform 0.3s ease;
-}
-
-
-/* ---------- Barre de navigation ---------- */
+/*  Barre de navigation  */
 .barre {
     position: relative;
     z-index: 10;
@@ -459,8 +96,8 @@ footer p {
 .destinations summary:hover,
 .destinations[open] summary {
     background: none;
-    color: #00cfff;
-    border-bottom-color: #00cfff;
+    color: var(--accent);
+    border-bottom-color: var(--accent);
     box-shadow: none;
     text-shadow: 0 0 10px rgba(0, 207, 255, 0.6);
 }
@@ -498,8 +135,8 @@ footer p {
     padding: 8px;
     list-style: none;
     text-align: left;
-    background: #0b2238;
-    border: 1px solid #1e4a6b;
+    background: var(--panneau);
+    border: 1px solid var(--bordure);
     border-radius: 12px;
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.5),
@@ -522,6 +159,304 @@ footer p {
 .destinations li a:hover,
 .destinations li a[aria-current="page"] {
     background: rgba(0, 207, 255, 0.15);
-    color: #00cfff;
+    color: var(--accent);
     box-shadow: none;
 }
+
+/* En-tête */
+header {
+    padding: 45px 20px 10px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: clamp(28px, 5vw, 52px);
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 18px rgba(0, 207, 255, 0.45);
+}
+
+header p {
+    margin-top: 12px;
+    color: var(--texte-doux);
+    font-size: 16px;
+}
+
+/* Introduction du continent */
+header > h1 + p {
+    max-width: 700px;
+    margin: 16px auto 0;
+    font-size: 17px;
+    color: var(--texte-clair);
+}
+
+/* Liste des pays (haut de page) */
+nav p {
+    margin-top: 32px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav ul,
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+nav a,
+footer a {
+    display: inline-block;
+    padding: 10px 22px;
+    color: white;
+    background: var(--panneau);
+    border: 1px solid var(--bordure);
+    border-radius: 999px;
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+nav a:hover,
+footer a:hover {
+    background: var(--accent);
+    color: var(--fond);
+    box-shadow: 0 0 18px rgba(0, 207, 255, 0.6);
+}
+
+/* Séparateur */
+hr {
+    border: 0;
+    height: 1px;
+    margin: 30px 0 0;
+    background: linear-gradient(90deg, transparent, var(--bordure), transparent);
+}
+
+/* Contenu principal */
+main {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Un pays : les textes occupent toute la largeur */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 24px;
+    padding: 40px 0 20px;
+    scroll-margin-top: 20px;
+}
+
+section > :not(figure) {
+    flex: 0 0 100%;
+}
+
+h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-shadow: 0 0 14px rgba(0, 207, 255, 0.4);
+}
+
+/* Période du voyage */
+section > p:first-of-type {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texte-doux);
+}
+
+/* Description du pays */
+section > p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: var(--texte-clair);
+}
+
+h3 {
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--texte-doux);
+}
+
+/* Photos */
+figure {
+    background: var(--panneau);
+    border: 1px solid var(--bordure-douce);
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Effet zoom au survol */
+figure:hover {
+    transform: scale(1.04);
+    z-index: 2;
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.35);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: var(--texte-doux);
+}
+
+/* Défilement horizontal des photos */
+.photos-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.photos-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 15px 5px;
+    width: 100%;
+    /* Masque la barre de défilement pour un rendu épuré */
+    scrollbar-width: none; /* Firefox */
+}
+
+.photos-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+/* 3 photos côte à côte sur ordinateur */
+.photos-container figure {
+    flex: 0 0 calc(33.333% - 14px);
+    scroll-snap-align: start;
+}
+
+/* Indique que l'on peut cliquer sur les photos */
+.photos-container figure img {
+    cursor: zoom-in;
+}
+
+/* Boutons fléchés gauche / droite */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--accent);
+    background: rgba(6, 21, 37, 0.85);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        box-shadow 0.3s;
+}
+
+.scroll-btn:hover {
+    background: var(--accent);
+    color: var(--fond);
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.7);
+}
+
+.prev-btn {
+    left: -15px;
+}
+
+.next-btn {
+    right: -15px;
+}
+
+/* Photo en grand */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(6, 21, 37, 0.92);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 207, 255, 0.4);
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--accent);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #ffffff;
+}
+
+/* Bas de page */
+footer {
+    max-width: 1250px;
+    margin: 40px auto 0;
+    padding: 40px 20px 50px;
+    border-top: 1px solid var(--bordure-douce);
+    color: var(--texte-doux);
+}
+
+footer h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: none;
+}
+
+footer p {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
