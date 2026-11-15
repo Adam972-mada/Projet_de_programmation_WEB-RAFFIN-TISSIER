@@ -127,3 +127,28 @@ Réputé pour : ses plages et lagons, la plongée et les récifs coralliens, les
       <li><a href="asie.html">Asie</a></li>
       <li><a href="europe.html">Europe</a></li>
       <li><a href="afrique.html">Afrique</a></li>
+      <li><a href="amerique-du-nord.html">Amérique du Nord</a></li>
+      <li><a href="amerique-du-sud.html">Amérique du Sud</a></li>
+    </ul>
+    <p>© 2026 Blue Horizons. Tous droits réservés.</p>
+  </footer>
+
+     <script>
+    document.querySelectorAll(".photos-scroll-wrapper").forEach(wrapper => {
+      const container = wrapper.querySelector(".photos-container");
+      const prevBtn = wrapper.querySelector(".prev-btn");
+      const nextBtn = wrapper.querySelector(".next-btn");
+
+      prevBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: -step, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: step, behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>

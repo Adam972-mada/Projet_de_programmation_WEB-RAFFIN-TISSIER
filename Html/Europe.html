@@ -178,6 +178,22 @@ Réputé pour : Paris et la tour Eiffel, le Louvre, la gastronomie et les vins, 
     <p>© 2026 Blue Horizons. Tous droits réservés.</p>
   </footer>
 
-  <script src="../js/script.js"></script>
+   <script>
+    document.querySelectorAll(".photos-scroll-wrapper").forEach(wrapper => {
+      const container = wrapper.querySelector(".photos-container");
+      const prevBtn = wrapper.querySelector(".prev-btn");
+      const nextBtn = wrapper.querySelector(".next-btn");
+
+      prevBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: -step, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: step, behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
