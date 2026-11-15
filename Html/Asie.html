@@ -9,21 +9,19 @@
 <body>
 
   <header>
-    <!-- Remplace index.html par le nom de ta page d'accueil si besoin -->
     <p><a href="Accueil.html">← Retour à l'accueil</a></p>
 
     <h1>Bienvenue en Asie</h1>
 
-    <!-- INTRODUCTION DU CONTINENT : remplace ce texte -->
     <p>Le plus vaste et le plus peuplé des continents, où les traditions anciennes se mêlent à une modernité fulgurante. Des temples millénaires aux mégapoles illuminées, des rizières en terrasses aux plages tropicales, chaque étape est un dépaysement. Les marchés, les saveurs et l’hospitalité en font un voyage pour tous les sens.</p>
 
     <nav>
       <p>Pays visités :</p>
       <ul>
-      <li><a href="#japon">Japon</a></li>
-      <li><a href="#thailande">Thaïlande</a></li>
-      <li><a href="#vietnam">Vietnam</a></li>
-      <li><a href="#malaisie">Malaisie</a></li>
+        <li><a href="#japon">Japon</a></li>
+        <li><a href="#thailande">Thaïlande</a></li>
+        <li><a href="#vietnam">Vietnam</a></li>
+        <li><a href="#malaisie">Malaisie</a></li>
       </ul>
     </nav>
   </header>
@@ -40,30 +38,28 @@
 
     <p>Période du voyage : [mois et année]</p>
 
-    <!-- DESCRIPTION : remplace ce texte par la présentation du pays (villes visitées, souvenirs, durée…) -->
     <p>Un archipel où les traditions millénaires côtoient la technologie de pointe. On y passe des temples et jardins zen de Kyoto aux gratte-ciel illuminés de Tokyo, avec le mont Fuji en toile de fond.
 Réputé pour : ses cerisiers en fleurs, sa cuisine (sushis, ramen), ses temples et sanctuaires, ses trains à grande vitesse, sa culture manga et jeux vidéo.</p>
 
     <h3>Photos</h3>
 
-    <!-- PHOTOS – JAPON :
-         1. Mets tes images dans le dossier  img/asie/japon/
-         2. Pour chaque photo, change le nom du fichier dans src="..." (ou colle ton propre lien)
-         3. Pour ajouter une photo : copie un bloc <figure> ... </figure> et colle-le à la suite
-         4. Pour en retirer une : supprime le bloc <figure> ... </figure> -->
-
-      <img src="../img/asie/japon/1.jpg" alt="Photo 1" width="400">
-      <img src="../img/asie/japon/2.jpg" alt="Photo 2" width="400">
-      <img src="../img/asie/japon/3.jpg" alt="Photo 3" width="400">
-      <img src="../img/asie/japon/4.jpg" alt="Photo 4" width="400">
-      <img src="../img/asie/japon/5.jpg" alt="Photo 5" width="400">
-      <img src="../img/asie/japon/6.jpg" alt="Photo 6" width="400">
-      <img src="../img/asie/japon/7.jpg" alt="Photo 7" width="400">
-      <img src="../img/asie/japon/8.jpg" alt="Photo 8" width="400">
-      <img src="../img/asie/japon/9.jpg" alt="Photo 9" width="400">
-      <img src="../img/asie/japon/10.jpg" alt="Photo 10" width="400">
-      <img src="../img/asie/japon/11.jpg" alt="Photo 11" width="400">
-  
+    <div class="photos-scroll-wrapper">
+      <button class="scroll-btn prev-btn" aria-label="Précédent">❮</button>
+      <div class="photos-container">
+        <figure><img src="../img/asie/japon/1.jpg" alt="Photo 1" width="400"></figure>
+        <figure><img src="../img/asie/japon/2.jpg" alt="Photo 2" width="400"></figure>
+        <figure><img src="../img/asie/japon/3.jpg" alt="Photo 3" width="400"></figure>
+        <figure><img src="../img/asie/japon/4.jpg" alt="Photo 4" width="400"></figure>
+        <figure><img src="../img/asie/japon/5.jpg" alt="Photo 5" width="400"></figure>
+        <figure><img src="../img/asie/japon/6.jpg" alt="Photo 6" width="400"></figure>
+        <figure><img src="../img/asie/japon/7.jpg" alt="Photo 7" width="400"></figure>
+        <figure><img src="../img/asie/japon/8.jpg" alt="Photo 8" width="400"></figure>
+        <figure><img src="../img/asie/japon/9.jpg" alt="Photo 9" width="400"></figure>
+        <figure><img src="../img/asie/japon/10.jpg" alt="Photo 10" width="400"></figure>
+        <figure><img src="../img/asie/japon/11.jpg" alt="Photo 11" width="400"></figure>
+      </div>
+      <button class="scroll-btn next-btn" aria-label="Suivant">❯</button>
+    </div>
   </section>
 
   <hr>
@@ -75,24 +71,22 @@ Réputé pour : ses cerisiers en fleurs, sa cuisine (sushis, ramen), ses temples
 
     <p>Période du voyage : [mois et année]</p>
 
-    <!-- DESCRIPTION : remplace ce texte par la présentation du pays (villes visitées, souvenirs, durée…) -->
     <p>Surnommée le « pays du sourire », elle séduit par son accueil chaleureux et ses paysages variés, des montagnes du nord aux îles du sud. Bangkok, ville dense et vibrante, contraste avec le calme des plages et des temples.
 Réputé pour : ses plages et îles paradisiaques, ses temples bouddhistes dorés, sa cuisine de rue épicée, ses marchés flottants, ses sanctuaires d’éléphants.</p>
 
     <h3>Photos</h3>
 
-    <!-- PHOTOS – THAÏLANDE :
-         1. Mets tes images dans le dossier  img/asie/thailande/
-         2. Pour chaque photo, change le nom du fichier dans src="..." (ou colle ton propre lien)
-         3. Pour ajouter une photo : copie un bloc <figure> ... </figure> et colle-le à la suite
-         4. Pour en retirer une : supprime le bloc <figure> ... </figure> -->
-
-
-      <img src="../img/asie/thailande/1.jpg" alt="Photo 1" width="400">
-      <img src="../img/asie/thailande/3.jpg" alt="Photo 3" width="400">
-      <img src="../img/asie/thailande/4.jpg" alt="Photo 4" width="400">
-      <img src="../img/asie/thailande/5.jpg" alt="Photo 5" width="400">
-  
+    <div class="photos-scroll-wrapper">
+      <button class="scroll-btn prev-btn" aria-label="Précédent">❮</button>
+      <div class="photos-container">
+        <figure><img src="../img/asie/thailande/1.jpg" alt="Photo 1" width="400"></figure>
+        <figure><img src="../img/asie/thailande/3.jpg" alt="Photo 3" width="400"></figure>
+        <figure><img src="../img/asie/thailande/4.jpg" alt="Photo 4" width="400"></figure>
+        <figure><img src="../img/asie/thailande/5.jpg" alt="Photo 5" width="400"></figure>
+      </div>
+      <button class="scroll-btn next-btn" aria-label="Suivant">❯</button>
+    </div>
+  </section>
 
   <hr>
   <!-- =====================================================================
@@ -103,30 +97,28 @@ Réputé pour : ses plages et îles paradisiaques, ses temples bouddhistes doré
 
     <p>Période du voyage : [mois et année]</p>
 
-    <!-- DESCRIPTION : remplace ce texte par la présentation du pays (villes visitées, souvenirs, durée…) -->
     <p>Un pays tout en longueur, de Hanoï au nord à Hô Chi Minh-Ville au sud, entre rizières, montagnes et littoral. Son histoire marquante et son énergie quotidienne, faite de scooters et de marchés animés, laissent une forte impression.
 Réputé pour : la baie d’Hạ Long, les rizières en terrasses de Sapa, la ville de Hội An et ses lanternes, le phở, le café vietnamien.</p>
 
     <h3>Photos</h3>
 
-    <!-- PHOTOS – VIETNAM :
-         1. Mets tes images dans le dossier  img/asie/vietnam/
-         2. Pour chaque photo, change le nom du fichier dans src="..." (ou colle ton propre lien)
-         3. Pour ajouter une photo : copie un bloc <figure> ... </figure> et colle-le à la suite
-         4. Pour en retirer une : supprime le bloc <figure> ... </figure> -->
-
-      <img src="../img/asie/vietnam/1.jpg" alt="Photo 1" width="400">
-      <img src="../img/asie/vietnam/2.jpg" alt="Photo 2" width="400">
-      <img src="../img/asie/vietnam/3.jpg" alt="Photo 3" width="400">
-      <img src="../img/asie/vietnam/4.jpg" alt="Photo 4" width="400">
-      <img src="../img/asie/vietnam/5.jpg" alt="Photo 5" width="400">
-      <img src="../img/asie/vietnam/6.jpg" alt="Photo 6" width="400">
-      <img src="../img/asie/vietnam/7.jpg" alt="Photo 7" width="400">
-      <img src="../img/asie/vietnam/8.jpg" alt="Photo 8" width="400">
-      <img src="../img/asie/vietnam/9.jpg" alt="Photo 9" width="400">
-      <img src="../img/asie/vietnam/10.jpg" alt="Photo 10" width="400">
-      <img src="../img/asie/vietnam/11.jpg" alt="Photo 11" width="400">
-
+    <div class="photos-scroll-wrapper">
+      <button class="scroll-btn prev-btn" aria-label="Précédent">❮</button>
+      <div class="photos-container">
+        <figure><img src="../img/asie/vietnam/1.jpg" alt="Photo 1" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/2.jpg" alt="Photo 2" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/3.jpg" alt="Photo 3" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/4.jpg" alt="Photo 4" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/5.jpg" alt="Photo 5" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/6.jpg" alt="Photo 6" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/7.jpg" alt="Photo 7" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/8.jpg" alt="Photo 8" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/9.jpg" alt="Photo 9" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/10.jpg" alt="Photo 10" width="400"></figure>
+        <figure><img src="../img/asie/vietnam/11.jpg" alt="Photo 11" width="400"></figure>
+      </div>
+      <button class="scroll-btn next-btn" aria-label="Suivant">❯</button>
+    </div>
   </section>
 
   <hr>
@@ -138,30 +130,28 @@ Réputé pour : la baie d’Hạ Long, les rizières en terrasses de Sapa, la vi
 
     <p>Période du voyage : [mois et année]</p>
 
-    <!-- DESCRIPTION : remplace ce texte par la présentation du pays (villes visitées, souvenirs, durée…) -->
     <p>Un carrefour où se mêlent cultures malaise, chinoise et indienne, ce qui se retrouve dans les fêtes, l’architecture et l’assiette. Elle réunit mégapole moderne, plages et forêts tropicales parmi les plus anciennes du monde.
 Réputé pour : les tours Petronas de Kuala Lumpur, sa diversité culinaire, ses îles (Langkawi, Perhentian), la jungle de Bornéo et ses orangs-outans.</p>
 
     <h3>Photos</h3>
 
-    <!-- PHOTOS – MALAISIE :
-         1. Mets tes images dans le dossier  img/asie/malaisie/
-         2. Pour chaque photo, change le nom du fichier dans src="..." (ou colle ton propre lien)
-         3. Pour ajouter une photo : copie un bloc <figure> ... </figure> et colle-le à la suite
-         4. Pour en retirer une : supprime le bloc <figure> ... </figure> -->
-
-      <img src="../img/asie/malaisie/1.jpg" alt="Photo 1" width="400">
-      <img src="../img/asie/malaisie/2.jpg" alt="Photo 2" width="400">
-      <img src="../img/asie/malaisie/3.jpg" alt="Photo 3" width="400">
-      <img src="../img/asie/malaisie/4.jpg" alt="Photo 4" width="400">
-      <img src="../img/asie/malaisie/5.jpg" alt="Photo 5" width="400">
-      <img src="../img/asie/malaisie/6.jpg" alt="Photo 6" width="400">
-      <img src="../img/asie/malaisie/7.jpg" alt="Photo 7" width="400">
-      <img src="../img/asie/malaisie/8.jpg" alt="Photo 8" width="400">
-      <img src="../img/asie/malaisie/9.jpg" alt="Photo 9" width="400">
-      <img src="../img/asie/malaisie/10.jpg" alt="Photo 10" width="400">
-      <img src="../img/asie/malaisie/11.jpg" alt="Photo 11" width="400">
-     
+    <div class="photos-scroll-wrapper">
+      <button class="scroll-btn prev-btn" aria-label="Précédent">❮</button>
+      <div class="photos-container">
+        <figure><img src="../img/asie/malaisie/1.jpg" alt="Photo 1" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/2.jpg" alt="Photo 2" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/3.jpg" alt="Photo 3" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/4.jpg" alt="Photo 4" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/5.jpg" alt="Photo 5" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/6.jpg" alt="Photo 6" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/7.jpg" alt="Photo 7" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/8.jpg" alt="Photo 8" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/9.jpg" alt="Photo 9" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/10.jpg" alt="Photo 10" width="400"></figure>
+        <figure><img src="../img/asie/malaisie/11.jpg" alt="Photo 11" width="400"></figure>
+      </div>
+      <button class="scroll-btn next-btn" aria-label="Suivant">❯</button>
+    </div>
   </section>
 
   <hr>
@@ -176,8 +166,25 @@ Réputé pour : les tours Petronas de Kuala Lumpur, sa diversité culinaire, ses
       <li><a href="amerique-du-nord.html">Amérique du Nord</a></li>
       <li><a href="amerique-du-sud.html">Amérique du Sud</a></li>
     </ul>
-    <p>&copy; 2026 Blue Horizons. Tous droits réservés.</p>
+    <p>© 2026 Blue Horizons. Tous droits réservés.</p>
   </footer>
 
+   <script>
+    document.querySelectorAll(".photos-scroll-wrapper").forEach(wrapper => {
+      const container = wrapper.querySelector(".photos-container");
+      const prevBtn = wrapper.querySelector(".prev-btn");
+      const nextBtn = wrapper.querySelector(".next-btn");
+
+      prevBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: -step, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const step = container.querySelector("figure").offsetWidth + 20;
+        container.scrollBy({ left: step, behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
