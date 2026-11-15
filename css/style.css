@@ -99,3 +99,112 @@ main {
     }
 }
 
+/* PAGE À PROPOS */
+
+.page-apropos {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 25px;
+    color: white;
+}
+
+.retour-apropos {
+    display: inline-block;
+    color: #00d9ff;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.retour-apropos:hover {
+    text-decoration: underline;
+}
+
+.intro-apropos,
+.objectif-apropos {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.page-apropos h2 {
+    font-size: 36px;
+    color: #00d9ff;
+    margin-bottom: 25px;
+}
+
+.page-apropos p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.equipe-apropos {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.membres-apropos {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.membre {
+    background: #10243b;
+    border: 1px solid #24445d;
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membre:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.3);
+}
+
+.photo-membre {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00d9ff;
+    background: #18334c;
+}
+
+.photo-membre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.membre h3 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.membre span {
+    display: block;
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+.membre p {
+    font-size: 15px;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .page-apropos h2 {
+        font-size: 28px;
+    }
+
+    .membre {
+        width: 100%;
+    }
+}
+
