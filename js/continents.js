@@ -53,3 +53,5 @@
   closeBtn.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", closeLightbox);
 });
+
+

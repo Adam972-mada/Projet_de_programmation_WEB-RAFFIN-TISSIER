@@ -1,5 +1,5 @@
 
-/*Couleurs */
+/* Couleurs */
 :root {
     --fond: #061525;
     --accent: #00cfff;
@@ -10,7 +10,7 @@
     --texte-clair: #c9d9e6;
 }
 
-/*  Base  */
+/* Base */
 * {
     margin: 0;
     padding: 0;
