@@ -1,20 +1,3 @@
-    document.querySelectorAll(".photos-scroll-wrapper").forEach(wrapper => {
-      const container = wrapper.querySelector(".photos-container");
-      const prevBtn = wrapper.querySelector(".prev-btn");
-      const nextBtn = wrapper.querySelector(".next-btn");
-
-      prevBtn.addEventListener("click", () => {
-        const step = container.querySelector("figure").offsetWidth + 20;
-        container.scrollBy({ left: -step, behavior: "smooth" });
-      });
-
-      nextBtn.addEventListener("click", () => {
-        const step = container.querySelector("figure").offsetWidth + 20;
-        container.scrollBy({ left: step, behavior: "smooth" });
-      });
-    });
-
-
     document.addEventListener("DOMContentLoaded", () => {
   // 1. Gestion du carrousel horizontal (boutons de défilement)
   const wrappers = document.querySelectorAll(".photos-scroll-wrapper");
